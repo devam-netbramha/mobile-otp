@@ -80,6 +80,8 @@
             line-height: 24px;
             font-weight: 400;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
 
             &.grey {
                 color: #595959;
@@ -87,7 +89,11 @@
 
             a {
                 color: $primary_color;
+                display: inline-flex;
+                align-items: center;
+                line-height: 1.2;
                 text-decoration: underline;
+                margin-left: 8px;
             }
         }
 
@@ -496,6 +502,31 @@
 
                 &.resendOtp {
                     margin-top: 16px;
+
+                    .otpInfo {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex: 1;
+
+                        p {
+                            color: #000;
+                            font-weight: 400;
+                        }
+
+                        .hide {
+                            display: none;
+                        }
+
+                        .show {
+                            display: inline-block;
+                        }
+
+                        .counter {
+                            font-weight: 700;
+                            color: #262626;
+                        }
+                    }
                 }
             }
 
@@ -510,6 +541,12 @@
 
                     &:not(:last-child) {
                         margin-right: 16px;
+                    }
+
+                    @media(max-width: 768px) {
+                        aspect-ratio: 1/1;
+                        height: 36px;
+                        padding: 2px;
                     }
                 }
 
@@ -611,9 +648,13 @@
                     &+p {
                         margin-top: 10px;
                     }
+
+                    a {
+                        color: #00A6CA;
+                    }
                 }
 
-                a {
+                .form__btn {
                     margin-top: 24px;
                     max-width: 160px;
                     width: 100%;
@@ -629,10 +670,11 @@
 
                 a {
                     text-decoration: underline;
-                    color: #2c2c2c;
+                    color: #00A6CA;
                     margin-top: 0;
                     width: initial;
                     padding-left: 2px;
+                    padding-right: 2px;
                 }
             }
         }

@@ -44,10 +44,10 @@ function checkForInput(element) {
   const $info = $(element).siblings('.info');
 
   if ($(element).val().length <= 0) {
-    $label.addClass('disabled');
+    // $label.addClass('disabled');
     $info.removeClass('show');
   } else {
-    $label.removeClass('disabled');
+    // $label.removeClass('disabled');
     $info.addClass('show');
   }
 }

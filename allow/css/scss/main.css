@@ -242,13 +242,19 @@ table {
   line-height: 24px;
   font-weight: 400;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 .main .login__desc.grey {
   color: #595959;
 }
 .main .login__desc a {
   color: #00A6CA;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
   text-decoration: underline;
+  margin-left: 8px;
 }
 .main .login__error {
   display: none;
@@ -599,6 +605,26 @@ table {
 .main.mobile .form__extra.resendOtp {
   margin-top: 16px;
 }
+.main.mobile .form__extra.resendOtp .otpInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+.main.mobile .form__extra.resendOtp .otpInfo p {
+  color: #000;
+  font-weight: 400;
+}
+.main.mobile .form__extra.resendOtp .otpInfo .hide {
+  display: none;
+}
+.main.mobile .form__extra.resendOtp .otpInfo .show {
+  display: inline-block;
+}
+.main.mobile .form__extra.resendOtp .otpInfo .counter {
+  font-weight: 700;
+  color: #262626;
+}
 .main.mobile .form .otp-wrapper {
   display: flex;
   align-items: center;
@@ -610,6 +636,13 @@ table {
 }
 .main.mobile .form .otp-wrapper input:not(:last-child) {
   margin-right: 16px;
+}
+@media (max-width: 768px) {
+  .main.mobile .form .otp-wrapper input {
+    aspect-ratio: 1/1;
+    height: 36px;
+    padding: 2px;
+  }
 }
 .main.mobile .form .otp-wrapper.error input {
   border-color: #EB0000;
@@ -710,10 +743,11 @@ table {
 }
 .main .remapping .error-note a {
   text-decoration: underline;
-  color: #2c2c2c;
+  color: #00A6CA;
   margin-top: 0;
   width: initial;
   padding-left: 2px;
+  padding-right: 2px;
 }
 .main .remapping__header {
   padding: 40px 0 34px;

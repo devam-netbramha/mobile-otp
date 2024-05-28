@@ -82,35 +82,27 @@
                                 <li data-target="#loginBanner" data-slide-to="0" class="active"></li>
                                 <li data-target="#loginBanner" data-slide-to="1"></li>
                                 <li data-target="#loginBanner" data-slide-to="2"></li>
-                                <li data-target="#loginBanner" data-slide-to="3"></li>
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="main__left">
-                                        <h1 class="main__title">Banks check your CIBIL Score before approving your loan</h1>
+                                        <h1 class="main__title">Everything you need to monitor your credit health and stay credit-ready, all in one place.</h1>
                                         <p class="main__desc">Don’t Worry. Checking your CIBIL Score won’t lower it.</p>
                                         <img class="img-fluid main__image" src="./images/login-banner.svg" alt="login banner">
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="main__left">
-                                        <h1 class="main__title">CIBIL Alerts: Stay Secure</h1>
-                                        <p class="main__desc">Stay updated and aware of key changes in your credit profile.</p>
+                                        <h1 class="main__title">Stay Secure with CIBIL Alerts</h1>
+                                        <p class="main__desc">Keep up to date with key changes in your credit profile.</p>
                                         <img class="img-fluid main__image" src="./images/login-banner-3.svg" alt="login banner">
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="main__left">
-                                        <h1 class="main__title">Score Simulator: Stay Informed</h1>
-                                        <p class="main__desc">Take charge of your financial future by making informed credit decisions.</p>
+                                        <h1 class="main__title">Stay informed with CIBIL Score Simulator</h1>
+                                        <p class="main__desc">Empower your financial future by making well-informed credit decisions.</p>
                                         <img class="img-fluid main__image" src="./images/login-banner-4.svg" alt="login banner">
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="main__left">
-                                        <h1 class="main__title">CIBIL Score History: Stay Connected</h1>
-                                        <p class="main__desc">Take smart financial decisions by regularly checking your CIBIL Score & Report.</p>
-                                        <img class="img-fluid main__image" src="./images/login-banner-2.svg" alt="login banner">
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +112,7 @@
                         <div class="main__right">
                             <div class="top">
                                 <p class="login__title">Verify with OTP</p>
-                                <p class="login__desc">Mobile authentication failed. An OTP has been sent to your registered email ID aga****************@gmail.com</p>
+                                <p class="login__desc">We have sent an OTP to your registered email ID aga............@gmail.com, to complete verification.</p>
                                 <form class="form">
                                     <div class="input-container">
                                         <!-- add class "error"  to otp-wrapper for wrong otp-->
@@ -134,11 +126,11 @@
                                         </div>
 
                                         <!-- add class "show" to display the message -->
-                                        <label class="form__error">Incorrect OTP. Please try again (1 attempt remaining)</label>
+                                        <label class="form__error">Incorrect OTP.</label>
                                     </div>
                                     <!-- add disabled class to "disable" button -->
                                     <a href="#" class="form__btn mt-24">Verify OTP</a>
-                                    <p class="form__note">Trouble logging in? <a href="#">Verify Using Username</a></p>
+                                    <p class="form__note">Trouble logging in? <a href="./login-email.html">Verify with Username</a></p>
                                 </form>
                             </div>
                             <p class="form__footer">
@@ -150,45 +142,24 @@
                         </div>
                     </div>
                 </div>
-                <p class="copyright">© Copyright 2022 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
+                <p class="copyright">© Copyright 2024 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
             </div>
         </main>
 
         <!-- scrips -->
 
         <!-- jQuery -->
-        <script src="../js/jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
 
         <!-- popper.min -->
-        <script src="../js/popper.min.js"></script>
+        <script src="./js/popper.min.js"></script>
 
         <!-- Plugins -->
-        <script src="../js/bootstrap.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
 
 
         <!-- custom scripts -->
-        <script src="../js/main.js"></script>
-
-        <script>
-            function formatTime(seconds) {
-                var m = Math.floor(seconds / 60) % 60,
-                    s = seconds % 60;
-                if (m < 10) m = "0" + m;
-                if (s < 10) s = "0" + s;
-                return m + ":" + s;
-            }
-            var count = 30;
-            var counter = setInterval(timer, 1000);
-
-            function timer() {
-                count--;
-                if (count <= 0) {
-                    clearInterval(counter)
-                    $(".resend").removeClass('disabled')
-                }
-                document.getElementById('countOtp').innerHTML = formatTime(count);
-            }
-        </script>
+        <script src="./js/main.js"></script>
 
     </body>
 

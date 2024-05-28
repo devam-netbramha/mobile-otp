@@ -82,35 +82,27 @@
                                 <li data-target="#loginBanner" data-slide-to="0" class="active"></li>
                                 <li data-target="#loginBanner" data-slide-to="1"></li>
                                 <li data-target="#loginBanner" data-slide-to="2"></li>
-                                <li data-target="#loginBanner" data-slide-to="3"></li>
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="main__left">
-                                        <h1 class="main__title">Banks check your CIBIL Score before approving your loan</h1>
+                                        <h1 class="main__title">Everything you need to monitor your credit health and stay credit-ready, all in one place.</h1>
                                         <p class="main__desc">Don’t Worry. Checking your CIBIL Score won’t lower it.</p>
                                         <img class="img-fluid main__image" src="./images/login-banner.svg" alt="login banner">
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="main__left">
-                                        <h1 class="main__title">CIBIL Alerts: Stay Secure</h1>
-                                        <p class="main__desc">Stay updated and aware of key changes in your credit profile.</p>
+                                        <h1 class="main__title">Stay Secure with CIBIL Alerts</h1>
+                                        <p class="main__desc">Keep up to date with key changes in your credit profile.</p>
                                         <img class="img-fluid main__image" src="./images/login-banner-3.svg" alt="login banner">
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="main__left">
-                                        <h1 class="main__title">Score Simulator: Stay Informed</h1>
-                                        <p class="main__desc">Take charge of your financial future by making informed credit decisions.</p>
+                                        <h1 class="main__title">Stay informed with CIBIL Score Simulator</h1>
+                                        <p class="main__desc">Empower your financial future by making well-informed credit decisions.</p>
                                         <img class="img-fluid main__image" src="./images/login-banner-4.svg" alt="login banner">
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="main__left">
-                                        <h1 class="main__title">CIBIL Score History: Stay Connected</h1>
-                                        <p class="main__desc">Take smart financial decisions by regularly checking your CIBIL Score & Report.</p>
-                                        <img class="img-fluid main__image" src="./images/login-banner-2.svg" alt="login banner">
                                     </div>
                                 </div>
                             </div>
@@ -119,11 +111,11 @@
                     <div class="col-lg-6 col-12">
                         <div class="main__right">
                             <div class="top">
-                                <p class="login__title">Login to your CIBIL Dashboard</p>
+                                <p class="login__title">Login to your CIBIL Account</p>
                                 <form class="form">
                                     <div class="form__group">
                                         <div class="form__labels">
-                                            <label for="mobileNumber">Enter Mobile Number</label>
+                                            <label for="mobileNumber">Enter your registered mobile number</label>
                                         </div>
                                         <div class="form__input-wIcon">
                                             <input type="text" placeholder="e.g. 9879879870" id="mobileNumber">
@@ -141,7 +133,7 @@
                                         <p class="form__error">The OTP entered is incorrect. Please try again.</p>
 
                                         <!-- add "show" class for display the infomation message -->
-                                        <p class="form__error info">Enter your registered mobile number. An OTP will be sent for verification.</p>
+                                        <p class="form__error info">We will share an OTP for verification.</p>
 
                                         <p class="form__note">By continuing, you agree to the <a href="#">Terms and Conditions</a></p>
                                     </div>
@@ -162,25 +154,42 @@
                         </div>
                     </div>
                 </div>
-                <p class="copyright">© Copyright 2022 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
+                <p class="copyright">© Copyright 2024 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
             </div>
         </main>
 
         <!-- scrips -->
 
         <!-- jQuery -->
-        <script src="../js/jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
 
         <!-- popper.min -->
         <!-- <script src="../js/popper.min.js"></script> -->
 
         <!-- Plugins -->
         <!-- <script src="../js/bootstrap.min.js"></script> -->
-        <script src="../js/carousel.js"></script>
+        <script src="./js/carousel.js"></script>
 
 
         <!-- custom scripts -->
-        <script src="../js/main.js"></script>
+        <script src="./js/main.js"></script>
+
+        <script>
+            function checkForInput(element) {
+
+                const info = ('.form__error.info');
+                if ($(element).val().length <= 0) {
+                    // $label.addClass('disabled');
+                    $(info).removeClass('show');
+                } else {
+                    // $label.removeClass('disabled');
+                    $(info).addClass('show');
+                }
+            }
+            $('input#mobileNumber').on('change keyup', function () {
+                checkForInput(this);
+            });
+        </script>
 
     </body>
 
